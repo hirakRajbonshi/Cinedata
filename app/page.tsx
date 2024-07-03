@@ -1,5 +1,8 @@
-import Image from "next/image";
-
+import MovieRecom from "@/components/MovieRecom";
 export default function Home() {
-  return <section></section>;
+  return (
+    <section>
+      <MovieRecom />
+    </section>
+  );
 }
