@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --bg-primary: #fff;
-  --bg-secondary: #e8e8e8;
+  --bg-primary: #009688;
+  --bg-secondary: #edf2f7;
   --font-primary: #000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-primary: #000;
-    --bg-secondary: #121212;
-    --font-primary: #fff;
+    --bg-primary: #1a202c;
+    --bg-secondary: #252d3d;
+    --font-primary: #fafafa;
   }
 }
 

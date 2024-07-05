@@ -2,7 +2,13 @@ type MovieRating = {
   Source: string;
   Value: string;
 };
-
+export type MovieShortData = {
+  Title: string;
+  Year: string;
+  imdbID: string;
+  Type: string;
+  Poster: string;
+};
 export type MovieData = {
   Title: string;
   Year: string;
