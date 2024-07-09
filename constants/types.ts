@@ -2,6 +2,11 @@ type MovieRating = {
   Source: string;
   Value: string;
 };
+export type OMDbResponse1 = {
+  Search: MovieShortData[];
+  totalResults: string;
+  Response: string;
+};
 export type MovieShortData = {
   Title: string;
   Year: string;
