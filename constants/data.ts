@@ -1,4 +1,4 @@
-let data = {
+export let data = {
   Title: "Guardians of the Galaxy Vol. 2",
   Year: "2017",
   Rated: "PG-13",
@@ -30,4 +30,30 @@ let data = {
   Website: "N/A",
   Response: "True",
 };
-export default data;
+export let nullData = {
+  Title: "",
+  Year: "",
+  Rated: "",
+  Released: "",
+  Runtime: "",
+  Genre: "",
+  Director: "",
+  Writer: "",
+  Actors: "",
+  Plot: "",
+  Language: "",
+  Country: "",
+  Awards: "",
+  Poster: "",
+  Ratings: [],
+  Metascore: "",
+  imdbRating: "",
+  imdbVotes: "",
+  imdbID: "",
+  Type: "",
+  DVD: "",
+  BoxOffice: "",
+  Production: "",
+  Website: "",
+  Response: "False",
+};

@@ -11,11 +11,8 @@ export default function Page({ params }: { params: { movieName: string } }) {
     Response: "False",
   });
   useEffect(() => {
-    const API_KEY = process.env.NEXT_PUBLIC_OMDb_API_KEY;
     async function getData(name: string) {
-      const res = await fetch(
-        `https://www.omdbapi.com/?s=${name}&apikey=${API_KEY}`
-      );
+      const res = await fetch(`/api/search?name=${name}`);
 
       if (!res.ok) {
         throw new Error("Failed to fetch data");

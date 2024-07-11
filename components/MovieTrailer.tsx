@@ -10,8 +10,7 @@ export default function MovieTrailer(title: props) {
   console.log(YT_API_KEY);
   useEffect(() => {
     const searchVideo = async (title: string) => {
-      title = title + " trailer";
-      const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${title}&key=${YT_API_KEY}`;
+      const url = `/api/trailer?title=${title}`;
       try {
         const res = await fetch(url);
         if (!res.ok) {
