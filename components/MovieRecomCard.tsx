@@ -22,7 +22,7 @@ export default function MovieRecomCard(data: TMDbMovieData) {
           alt={data.title}
         />
       </div>
-      <h1 className="relative text-sm text-center font-white md:text-xl ">
+      <h1 className="relative text-sm text-center font-white md:text-lg ">
         {data.title}
       </h1>
     </Link>

@@ -68,7 +68,7 @@ export default function Page() {
           />
         </label>
         <button type="submit" className="btn btn-primary">
-          Signup
+          Subscribe
         </button>{" "}
       </form>
       <p className="mt-2 mb-[5rem]">

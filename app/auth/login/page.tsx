@@ -28,7 +28,7 @@ export default function Page() {
             className="input input-bordered w-full max-w-xs"
           />
         </label>
-        <button className="btn btn-primary">Subscribe</button>{" "}
+        <button className="btn btn-primary">Login</button>{" "}
       </form>
       <p className="mt-2 mb-[5rem]">
         Don't have an account{" "}

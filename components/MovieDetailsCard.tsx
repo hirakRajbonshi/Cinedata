@@ -14,7 +14,7 @@ interface InfoProps {
 
 const Info: React.FC<InfoProps> = ({ label, value }) => {
   return (
-    <p className="text-base md:text-2xl text-wrap">
+    <p className="text-base md:text-xl text-wrap">
       <span className="font-semibold">{label}: </span>
       {value}
     </p>
@@ -37,7 +37,7 @@ export default function MovieDetailsCard(data: MovieData) {
           <Image
             className="rounded-lg hidden md:block"
             src={data.Poster}
-            width={500}
+            width={400}
             height={700}
             alt={`${data.Title} Poster`}
           />
@@ -47,16 +47,16 @@ export default function MovieDetailsCard(data: MovieData) {
         </div>
         <div className="flex justify-around w-full mt-2">
           <div className="text-center w-[30%]">
-            <p className="text-2xl md:text-4xl">{data.Metascore}</p>
-            <p className="text-sm md:text-lg">Metascroe</p>
+            <p className="text-2xl md:text-3xl">{data.Metascore}</p>
+            <p className="text-sm md:text-m">Metascroe</p>
           </div>
           <div className="text-center w-[40%]">
-            <p className="text-2xl md:text-4xl">{RottenTomatoRatings.Value}</p>
-            <p className="text-sm md:text-lg">{RottenTomatoRatings.Source}</p>
+            <p className="text-2xl md:text-3xl">{RottenTomatoRatings.Value}</p>
+            <p className="text-sm md:text-m">{RottenTomatoRatings.Source}</p>
           </div>
           <div className="text-center w-[30%]">
-            <p className="text-2xl md:text-4xl">{data.imdbRating}</p>
-            <p className="text-sm md:text-lg">IMDb Ratings</p>
+            <p className="text-2xl md:text-3xl">{data.imdbRating}</p>
+            <p className="text-sm md:text-m">IMDb Ratings</p>
           </div>
         </div>
       </div>

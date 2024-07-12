@@ -9,7 +9,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Movie",
+  title: "Cinedata",
   description: "An application to search for movies and display their details.",
 };
 

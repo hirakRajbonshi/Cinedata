@@ -30,8 +30,8 @@ const MovieRecom: React.FC<props> = ({ genre }) => {
   return (
     <div className="mt-2 px-3">
       <div className="flex items-center justify-between">
-        <h1 className="text-l font-semibold md:text-3xl">{genre}</h1>
-        <Link className="text-xs md:text-2xl" href="/">
+        <h1 className="text-l font-semibold md:text-xl">{genre}</h1>
+        <Link className="text-xs md:text-lg" href="/">
           View All &gt;
         </Link>
       </div>

@@ -4,9 +4,9 @@ import SearchNav from "./SearchNav";
 export default function Navbar() {
   return (
     <>
-      <nav className="fixed flex items-center justify-between z-[100] h-[4rem] w-[100vw] bg-secondary px-10 md:text-2xl">
-        <Link className="mr-3" href="/">
-          FilmFolio
+      <nav className="fixed flex items-center justify-between z-[100] h-[4rem] w-[100vw] bg-secondary px-10 md:text-xl">
+        <Link className="mr-3  font-bold" href="/">
+          Cinedata
         </Link>
         <div className="md:hidden">
           <SearchNav />
@@ -24,18 +24,21 @@ export default function Navbar() {
             className="relative dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow"
           >
             <li>
-              <a href="">C1</a>
+              <Link href="/category/Action">Action</Link>
             </li>
             <li>
-              <a href="">C2</a>
+              <Link href="/category/Adventure">Adventure</Link>
             </li>
             <li>
-              <a href="">C3</a>
+              <Link href="/category/Horror">Horror</Link>
             </li>
             <li>
-              <a href="">C4</a>
+              <Link href="/category/Comedy">Comedy</Link>
             </li>
             <li>
+              <Link href="/category/Animated">Animated</Link>
+            </li>
+            <li className="bg-secondary rounded-lg text-white">
               <Link href="/auth/subscribe">Subscribe</Link>
             </li>
           </ul>
@@ -46,7 +49,7 @@ export default function Navbar() {
             <div
               tabIndex={0}
               role="button"
-              className="btn bg-transparent text-2xl border-transparent m-1"
+              className="btn bg-transparent text-xl border-transparent m-1"
             >
               Catergory
             </div>
@@ -54,16 +57,25 @@ export default function Navbar() {
               tabIndex={0}
               className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
             >
-              <li>
-                <a>C1</a>
+              <li className="text-m font-semibold">
+                <Link href="/category/Action">Action</Link>
               </li>
-              <li>
-                <a>C2</a>
+              <li className="text-m font-semibold">
+                <Link href="/category/Adventure">Adventure</Link>
+              </li>
+              <li className="text-m font-semibold">
+                <Link href="/category/Horror">Horror</Link>
+              </li>
+              <li className="text-m font-semibold">
+                <Link href="/category/Comedy">Comedy</Link>
+              </li>
+              <li className="text-m font-semibold">
+                <Link href="/category/Animated">Animated</Link>
               </li>
             </ul>
           </div>
           <Link
-            className="text-white hover:bg-black rounded-lg md:transition-colors ease-in duration-75	p-2"
+            className="font-semibold hover:bg-black rounded-lg md:transition-colors ease-in duration-75	p-2"
             href="/auth/subscribe"
           >
             Subscribe
