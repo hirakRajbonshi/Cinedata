@@ -1,4 +1,4 @@
-export let data = {
+export let example = {
   Title: "Guardians of the Galaxy Vol. 2",
   Year: "2017",
   Rated: "PG-13",
@@ -56,4 +56,10 @@ export let nullData = {
   Production: "",
   Website: "",
   Response: "False",
+};
+export let nullDataTMDb = {
+  page: 0,
+  results: [],
+  total_pages: 0,
+  total_results: 0,
 };

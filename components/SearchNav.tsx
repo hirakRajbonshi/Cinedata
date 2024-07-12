@@ -10,7 +10,7 @@ export default function SearchNav() {
     setSearch("");
   }, []);
   const handleClick = () => {
-    router.push(`/search/${search}`);
+    if (search != "") router.push(`/search/${search}`);
   };
   return (
     <div className="flex items-center h-[100%] bg-primary py-1 px-2 border-b-2 ">

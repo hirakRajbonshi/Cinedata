@@ -35,12 +35,21 @@ export default function MovieTrailer(title: props) {
   }, []);
   const embedURL = `https://www.youtube.com/embed/${videoId}`;
   return (
-    <iframe
-      className="relative"
-      allow="autoplay; fullscreen;"
-      width="320"
-      height="180"
-      src={embedURL}
-    />
+    <>
+      <iframe
+        className="relative md:hidden"
+        allow="autoplay; fullscreen;"
+        width="320"
+        height="180"
+        src={embedURL}
+      />
+      <iframe
+        className="relative hidden md:block"
+        allow="autoplay; fullscreen;"
+        width="960"
+        height="540"
+        src={embedURL}
+      />
+    </>
   );
 }

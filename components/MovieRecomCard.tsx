@@ -1,11 +1,30 @@
 import Image from "next/image";
-export default function MovieRecomCard() {
+import { TMDbMovieData } from "@/constants/types";
+import Link from "next/link";
+export default function MovieRecomCard(data: TMDbMovieData) {
   return (
-    <div>
-      <div className="relative flex items-end min-w-[6rem] h-[10rem] md:min-w-[10rem] md:h-[13rem]">
-        <Image src="/infinitywar.webp" fill={true} alt="Avengers Endgame" />
+    <Link href={`/movie/${data.title}`}>
+      <div className="relative flex items-end min-w-[6rem] h-[10rem] md:min-w-[10rem] md:h-auto">
+        <Image
+          className="md:hidden"
+          src={`https://image.tmdb.org/t/p/original/${data.poster_path}`}
+          // fill={true}
+          width={200}
+          height={300}
+          alt={data.title}
+        />
+        <Image
+          className="hidden md:block"
+          src={`https://image.tmdb.org/t/p/original/${data.poster_path}`}
+          // fill={true}
+          width={500}
+          height={700}
+          alt={data.title}
+        />
       </div>
-      {/* <h1 className="relative  text-sm font-white">Movie Name</h1> */}
-    </div>
+      <h1 className="relative text-sm text-center font-white md:text-xl ">
+        {data.title}
+      </h1>
+    </Link>
   );
 }

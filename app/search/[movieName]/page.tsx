@@ -67,32 +67,39 @@ export default function Page({ params }: { params: { movieName: string } }) {
         setFilteredMovies(sortedMovies);
       }
     };
-    // console.log(sort);
 
     sortMovies();
   }, [sort, filteredMovies]);
   return (
     <>
-      <div className="fixed  z-10 dropdown dropdown-right dropdown-hover">
-        <div tabIndex={0} role="button" className="btn m-1 bg-secondary">
+      <div className="fixed  z-10 dropdown bg-transparent dropdown-right dropdown-hover md:translate-x-[10%] md:top-[5rem]  md:text-base">
+        <div
+          tabIndex={0}
+          role="button"
+          className="btn m-1 bg-secondary border border-[#494848] hover:bg-transparent"
+        >
           Filter
         </div>
         <ul
           tabIndex={0}
           className="dropdown-content menu bg-base-100 rounded-box z-[1] w-auto py-2 px-4 shadow text-s gap-1"
         >
-          <button className="px-2 py-0.5" onClick={handleFilterClick} id="all">
+          <button
+            className="px-2 py-0.5 md:text-base"
+            onClick={handleFilterClick}
+            id="all"
+          >
             All
           </button>
           <button
-            className="px-2 py-0.5"
+            className="px-2 py-0.5 md:text-base"
             onClick={handleFilterClick}
             id="movie"
           >
             Movie
           </button>
           <button
-            className="px-2 py-0.5"
+            className="px-2 py-0.5 md:text-base"
             onClick={handleFilterClick}
             id="series"
           >
@@ -102,11 +109,11 @@ export default function Page({ params }: { params: { movieName: string } }) {
       </div>
       <button
         // onClick={setSort(!sort)}
-        className="fixed z-10 text-xs top-[7.5rem] ml-1 max-w-[4.2rem] bg-secondary p-2 rounded-lg font-primary"
+        className="fixed z-10 text-xs top-[7.5rem] ml-1 max-w-[4.2rem] bg-secondary border border-[#494848] p-2 rounded-lg font-primary hover:bg-transparent md:top-[5rem] md:left-[100%] md:translate-x-[-130%] md:max-w-[50rem] md:text-wrap md:text-base"
       >
         Sort By Year of Release
       </button>
-      <section className="flex flex-col items-center justify-center gap-3 p-3">
+      <section className="flex flex-col items-center justify-center gap-3 p-3 md:flex-row md:px-32 md:flex-wrap">
         {/* TODO: if response false */}
         {suc &&
           filteredMovies.map((movie: MovieShortData) => (

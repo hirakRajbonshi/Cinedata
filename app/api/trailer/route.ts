@@ -20,7 +20,6 @@ async function getData(title: string) {
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   const title = searchParams.get("title");
-
   if (!title) {
     return NextResponse.json(
       { error: 'Missing "name" query parameter' },
