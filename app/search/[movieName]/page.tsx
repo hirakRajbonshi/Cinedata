@@ -24,11 +24,11 @@ export default function Page({ params }: { params: { movieName: string } }) {
   }, []);
 
   const [filterOpt, setFilterOpt] = useState("all");
-  const handleFilterClick = (event: MouseEvent) => {
+  function handleFilterClick(event: React.MouseEvent<HTMLButtonElement>) {
     const target = event.target as HTMLElement;
     const id = target.id.toString();
     setFilterOpt(id);
-  };
+  }
   const suc = data.Response === "True";
 
   const [filteredMovies, setFilteredMovies] = useState<MovieShortData[]>([]);
@@ -86,21 +86,21 @@ export default function Page({ params }: { params: { movieName: string } }) {
         >
           <button
             className="px-2 py-0.5 md:text-base"
-            onClick={handleFilterClick}
+            onClick={(event) => handleFilterClick(event)}
             id="all"
           >
             All
           </button>
           <button
             className="px-2 py-0.5 md:text-base"
-            onClick={handleFilterClick}
+            onClick={(event) => handleFilterClick(event)}
             id="movie"
           >
             Movie
           </button>
           <button
             className="px-2 py-0.5 md:text-base"
-            onClick={handleFilterClick}
+            onClick={(event) => handleFilterClick(event)}
             id="series"
           >
             Series

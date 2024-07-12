@@ -19,6 +19,7 @@ export default function MovieCard(data: MovieShortData) {
               className="absolute z-10 left-[100%] translate-x-[10%] translate-y-[-100%]"
               onClick={handleWatchTrailer}
             >
+              .
               <IoClose size={30} />
             </button>
             <MovieTrailer title={data.Title} />
