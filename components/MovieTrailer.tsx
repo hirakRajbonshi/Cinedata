@@ -6,8 +6,6 @@ interface props {
 export default function MovieTrailer(title: props) {
   const [videoId, setVideoId] = useState("");
 
-  const YT_API_KEY = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
-  console.log(YT_API_KEY);
   useEffect(() => {
     const searchVideo = async (title: string) => {
       const url = `/api/trailer?title=${title}`;
