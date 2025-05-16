@@ -1,5 +1,5 @@
 
-# Cinedata - Movie Search and Details App
+# Cinedata - A Movie Search and Details App
 
 ## Overview
 
